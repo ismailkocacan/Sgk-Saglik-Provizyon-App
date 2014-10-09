@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp" 
+    style="@style/btn_blue_style">
+ 
+    <ImageView
+        android:id="@+id/imgCaptcha"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+ 
+    <EditText
+        android:id="@+id/edtCaptcha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:hint="Resimde ki yazıyı girin"
+        android:layout_weight="1"
+        android:ems="10"
+        android:textSize="15sp"            
+        style="@style/edt_style">
+        <requestFocus />
+    </EditText>
+ 
+</LinearLayout>

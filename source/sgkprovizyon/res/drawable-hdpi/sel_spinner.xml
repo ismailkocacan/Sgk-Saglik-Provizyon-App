@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" >
+        <layer-list>
+            <item>
+                <shape>
+                    <gradient
+                        android:startColor="#C1D7EC"
+                        android:endColor="#C1D7EC"
+                        android:angle="270" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="#C4E1FA" />
+                    <corners
+                        android:radius="4dp" />
+                    <padding
+                        android:left="3dp"
+                        android:top="3dp"
+                        android:right="3dp"
+                        android:bottom="3dp" />
+                </shape>
+            </item>
+            <item
+                android:top="12dp"
+                android:right="15dp">
+                <bitmap android:src="@drawable/arrow"
+                        android:gravity="top|right" />
+            </item>
+        </layer-list>
+    </item>
+        
+    <item android:state_enabled="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <gradient
+                        android:startColor="#D6EBFE"
+                        android:endColor="#BADBF7"
+                        android:angle="270" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="#C4E1FA" />
+                    <corners
+                        android:radius="4dp" />
+                    <padding
+                        android:left="3dp"
+                        android:top="3dp"
+                        android:right="3dp"
+                        android:bottom="3dp" />
+                </shape>
+            </item>
+            <item
+                android:top="12dp"
+                android:right="15dp">
+                <bitmap android:src="@drawable/arrow"
+                        android:gravity="top|right" />
+            </item>
+        </layer-list>
+    </item>
+    
+    
+     <item android:state_enabled="false">
+        <layer-list>
+            <item>
+                <shape>
+                    <gradient
+                        android:startColor="#D6EBFE"
+                        android:endColor="#BADBF7"
+                        android:angle="270" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="#C4E1FA" />
+                    <corners
+                        android:radius="4dp" />
+                    <padding
+                        android:left="3dp"
+                        android:top="3dp"
+                        android:right="3dp"
+                        android:bottom="3dp" />
+                </shape>
+            </item>
+            <item
+                android:top="12dp"
+                android:right="15dp">
+                <bitmap android:src="@drawable/arrow"
+                        android:gravity="top|right" />
+            </item>
+        </layer-list>
+    </item>
+    
+</selector>

@@ -1,0 +1,514 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+     
+     
+       <TextView
+            android:id="@+id/lblAppHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dip"
+            android:layout_marginBottom="1dip"
+            android:background="@drawable/bg_gradient_blue"
+            android:padding="10dip"
+            android:shadowColor="#000000"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="SGK Sağlık Provizyon"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+     
+           <LinearLayout
+                android:id="@+id/lline39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradient_control"
+                android:padding="2dip" >
+		         <LinearLayout
+				    android:id="@+id/reklam"
+				    android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:gravity="center"
+				    android:layout_alignParentBottom="true">
+				</LinearLayout>
+		    </LinearLayout>
+       
+          <LinearLayout
+            android:id="@+id/llLines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+              
+            <LinearLayout
+                android:id="@+id/lline31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradient_control"
+                android:padding="4dip" >
+                <TextView
+                    android:id="@+id/lblQTCKimlikNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#FFFFFF"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="T.C Kimlik No             "
+                    android:textSize="15sp"
+                    android:width="130dp"
+                    style="@style/txt_style"/>
+
+                <EditText
+                    android:id="@+id/edtQTcKimlikNo"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:textSize="15sp" 
+                    style="@style/edt_style">
+                </EditText>
+            </LinearLayout>
+            
+            
+             <LinearLayout
+                android:id="@+id/lline1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradient_control"
+                android:padding="4dip" >
+                <TextView
+                    android:id="@+id/lblQCiltNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#FFFFFF"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="Cilt No             "
+                    android:textSize="15sp"
+                    android:width="130dp"
+                    style="@style/txt_style"/>
+                <EditText
+                    android:id="@+id/edtQCiltNo"
+                    android:inputType="number"                    
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:textSize="15sp" 
+                    style="@style/edt_style">
+                </EditText>
+            </LinearLayout>
+            
+             
+           <LinearLayout
+                android:id="@+id/lline2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradient_control"
+                android:padding="4dip" >
+                <TextView
+                    android:id="@+id/lblQDogumYili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#FFFFFF"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="Doğum Yılı             "
+                    android:textSize="15sp"
+                    android:width="130dp" 
+                    style="@style/txt_style"/>
+                
+                <Spinner android:id="@+id/spnDogumYili"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    style="@style/spn_blue_style"/>
+            </LinearLayout>
+           
+           
+         
+           <LinearLayout
+                android:id="@+id/lline3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradient_control"
+                android:padding="4dip" >
+                <TextView
+                    android:id="@+id/lblQNufusIli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#FFFFFF"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="Nüfus İli             "
+                    android:textSize="15sp"
+                    android:width="130dp" 
+                    style="@style/txt_style"/>
+                
+                <Spinner android:id="@+id/spnNufusIl"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    style="@style/spn_blue_style"/>
+            </LinearLayout>
+            
+          <Button android:id="@+id/btnSorgula"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Sorgula"
+              android:layout_margin="3dip"
+              style="@style/btn_blue_style"/>
+                     
+          </LinearLayout>
+          
+          
+        <ScrollView
+            android:id="@+id/scvResult"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent">
+          <LinearLayout
+            android:id="@+id/llLines4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+                
+		            <LinearLayout
+		                android:id="@+id/lline32"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblAdiSoyadi"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    android:text="Adı Soyadı             "
+		                    android:textSize="15sp"
+		                    style="@style/txt_style"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtAdiSoyadi"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		            </LinearLayout>
+		            
+		            
+		            
+		           <LinearLayout
+		                android:id="@+id/lline33"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblDogumTarihi"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    android:text="Doğum Tarihi             "
+		                    style="@style/txt_style"
+		                    android:textSize="15sp"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtDogumTarihi"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		            </LinearLayout>
+		            
+		           
+		           <LinearLayout
+		                android:id="@+id/lline5"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblCinsiyet"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    android:text="Cinsiyet             "
+		                    style="@style/txt_style"
+		                    android:textSize="15sp"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtCinsiyet"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		            </LinearLayout>
+		            
+		         
+		           <LinearLayout
+		                android:id="@+id/lline6"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblKatiliPayiMuafiyeti"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="match_parent"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    android:text="Katılım Payı Muafiyeti"
+		                    style="@style/txt_style"
+		                    android:textSize="15sp"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtKatiliPayiMuafiyeti"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		            </LinearLayout>
+		            
+		           
+		           
+		           <LinearLayout
+		                android:id="@+id/lline7"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblSgkKapsami"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="match_parent"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    android:text="Sgk Kapsamı"
+		                    style="@style/txt_style"
+		                    android:textSize="15sp"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtSgkKapsami"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		            </LinearLayout>
+		            
+		           
+		           
+		           <LinearLayout
+		                android:id="@+id/lline8"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblSonuc"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="match_parent"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    android:text="Sonuç"
+		                    style="@style/txt_style"
+		                    android:textSize="15sp"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtSonuc"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		            </LinearLayout>
+            
+		           
+		            <LinearLayout
+		                android:id="@+id/lline9"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblYakinlikTuru"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    android:text="Yakınlık Türü"
+		                    style="@style/txt_style"
+		                    android:textSize="15sp"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtYakinlikTuru"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		            </LinearLayout>
+		            
+		            
+		            
+		            <LinearLayout
+		                android:id="@+id/lline10"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblYaralandigiKisi"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    style="@style/txt_style"
+		                    android:text="Yararlandiği Kişi"
+		                    android:textSize="15sp"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtYararlandigiKisi"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		            </LinearLayout>
+		            
+		            
+		            <LinearLayout
+		                android:id="@+id/lline11"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblSigortaliTuru"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    style="@style/txt_style"
+		                    android:text="Sigoratalı Türü"
+		                    android:textSize="15sp"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtSigorataliTuru"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		            </LinearLayout>
+		            
+		            
+		          <LinearLayout
+		                android:id="@+id/lline12"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblSicilNo"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    style="@style/txt_style"
+		                    android:text="Sicil No"
+		                    android:textSize="15sp"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtSicilNo"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		           </LinearLayout>
+		           
+		          
+		         <LinearLayout
+		                android:id="@+id/lline13"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:background="@drawable/bg_gradient_control"
+		                android:padding="4dip" >
+		                <TextView
+		                    android:id="@+id/lblSaglikKapsamKodu"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="match_parent"
+		                    android:shadowColor="#FFFFFF"
+		                    android:shadowDy="1"
+		                    android:shadowRadius="2"
+		                    style="@style/txt_style"
+		                    android:text="Sağlık Kapsamı"
+		                    android:textSize="15sp"
+		                    android:width="130dp" />
+		                <EditText
+		                    android:id="@+id/edtSaglikKapsamKodu"
+		                    android:layout_width="match_parent"
+		                    android:layout_height="wrap_content"
+		                    android:layout_weight="1"
+		                    android:ems="10"
+		                    android:textSize="15sp" 
+		                    style="@style/edt_result_style">
+		                </EditText>
+		           </LinearLayout>
+		           
+		         
+
+          </LinearLayout>
+ 
+        </ScrollView>
+                     
+     </LinearLayout>
+</RelativeLayout>

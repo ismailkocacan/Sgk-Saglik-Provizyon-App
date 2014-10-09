@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <p825:kisiSorgulaResponse xmlns:p825="http://kps.mobile.sgk.gov.tr">
+         <kisiSorgulaReturn>
+            <ad>İSMAİL</ad>
+            <soyad>KOCACAN</soyad>
+            <sessionId>1ca8f7f1-d008-4784-b935-81cbb8a55b6c</sessionId>
+            <sonucAciklama/>
+            <sonucKod>0</sonucKod>
+         </kisiSorgulaReturn>
+      </p825:kisiSorgulaResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
